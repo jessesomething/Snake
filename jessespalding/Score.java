@@ -10,14 +10,10 @@ public class Score {
     protected static int score;
     protected static int highScore = 0;
     protected static int increment;
-    protected static int sizeBonus = Snake.getSnakeSize() - 3;
-
-
 
     public Score(){
-        score = 0 + sizeBonus;
+        score = 0;
         increment = 1;  //how many points for eating a kibble
-        //Possible TODO get more points for eating kibbles, the longer the snake gets?
     }
 
     public static void resetScore() {
@@ -25,9 +21,8 @@ public class Score {
     }
 
     public static void increaseScore() {
-
-        score = score + increment;
-
+        int sizeBonus = Snake.getSnakeSize() - 3;
+        score = score + increment + sizeBonus;
     }
 
     public int getScore(){
