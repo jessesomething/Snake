@@ -1,5 +1,7 @@
 package jessespalding;
 
+// Jesse Spalding
+
 import java.util.TimerTask;
 
 public class GameClock extends TimerTask {

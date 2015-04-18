@@ -1,5 +1,7 @@
 package jessespalding;
 
+// Jesse Spalding
+
 import java.awt.Point;
 import java.util.LinkedList;
 

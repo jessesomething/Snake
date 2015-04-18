@@ -1,9 +1,6 @@
 package jessespalding;
 
-/** Keeps track of, and display the user's score
- *
- */
-
+// Jesse Spalding
 
 public class Score {
 
