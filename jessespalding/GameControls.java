@@ -34,10 +34,13 @@ public class GameControls implements KeyListener{
         }
 
         if (SnakeGame.getGameStage() == SnakeGame.GAME_OVER){
+            System.out.println("New snake made here");
             snake.reset();
             Score.resetScore();
-
             //Need to start the timer and start the game again
+            SnakeGame.snakeFrame.removeAll();
+            SnakeGame.initializeGame();
+            SnakeGame.createAndShowGUI();
             SnakeGame.newGame();
             SnakeGame.setGameStage(SnakeGame.DURING_GAME);
             panel.repaint();

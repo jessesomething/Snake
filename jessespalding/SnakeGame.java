@@ -54,8 +54,6 @@ public class SnakeGame {
         //Create and set up the window.
         System.out.println("Window setup");
 
-        gameControls = new GameControls(snake);
-
         // Checks if it's the first game and if not
         // changes frame visibility and removes them from the frame
         if (firstGame == false) {
@@ -67,6 +65,7 @@ public class SnakeGame {
         }
 
         snakeFrame = new JFrame();
+        gameControls = new GameControls(snake);
         snakeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         snakeFrame.setSize(xPixelMaxDimension, yPixelMaxDimension); // Sets the window size for the JFrame
         snakeFrame.setUndecorated(true); //hide title bar
@@ -91,6 +90,7 @@ public class SnakeGame {
         //set up score, snake and first kibble
         xSquares = xPixelMaxDimension / squareSize;
         ySquares = yPixelMaxDimension / squareSize;
+
 
 
         snake = new Snake(xSquares, ySquares, squareSize);

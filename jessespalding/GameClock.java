@@ -43,10 +43,7 @@ public class GameClock extends TimerTask {
             case SnakeGame.GAME_OVER: {
                 this.cancel();    //Stop the Timer
                 if (SnakeGame.getGameStage() == SnakeGame.GAME_OVER) {
-                    SnakeGame.snakeFrame.removeAll();
-                    SnakeGame.initializeGame();
-                    SnakeGame.createAndShowGUI();
-                    System.out.println("New snake made here");
+
                 }
                 break;
             }
