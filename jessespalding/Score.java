@@ -18,8 +18,10 @@ public class Score {
     }
 
     public static void increaseScore() {
+        Integer gameSpeed = Integer.valueOf(SnakeGame.getGameSpeed());
         int sizeBonus = Snake.getSnakeSize() - 3;
-        score = score + increment + sizeBonus;
+        int speedBonus = gameSpeed / 5;
+        score = (score + increment + sizeBonus) * speedBonus;
     }
 
     public int getScore(){
